@@ -4,16 +4,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
 async function contentChanger(option) {
   const mainContainer = document.getElementById("mainContainer");
-  mainContainer.innerHTML = `<div>
-    <h1 class="loader">Loader...</h1>
-  </div>`;
-
   const generatedDynamically = document.querySelectorAll("[id$='generatedDynamically']");
   if(generatedDynamically && generatedDynamically.length){
     generatedDynamically.forEach(element => {
       element.remove();
     });
   }
+  
   try {
     const response = await fetch(`${option}.html`);
     const responsejs = await fetch(`scripts/${option}.js`);
@@ -32,5 +29,6 @@ async function contentChanger(option) {
   } catch (error) {
     console.log("Error:", error);
   }
-}
 
+  clearInterval()
+}

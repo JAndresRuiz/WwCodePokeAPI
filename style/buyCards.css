@@ -1,0 +1,102 @@
+.infContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    height: 15rem;
+    justify-content: space-between;
+}
+
+.infContainer h1{
+    color: #486284;
+    text-align: center;
+}
+
+.infContainer p{
+    text-align: center;
+}
+
+.infContainer ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.line{
+    width: 90%;
+    height: 3px;
+    background-color: black;
+}
+
+#buyCardsContainer{
+    display: grid;
+    gap: 8rem;
+    grid-auto-rows: 18rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    justify-items: center;
+    padding: 3rem;
+    margin-bottom: 5rem;
+}
+
+
+.CardContainer{
+    width: 16rem;
+    height: 22rem;
+    background-color: #DEE5ED;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nameLikeContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.nameLikeContainer p{
+    font-weight: bold;
+}
+
+.nameLikeContainer p:first-letter {
+    text-transform: uppercase;
+}
+
+.imageCardContainer{
+    width: 13rem;
+    height: 14rem;
+    background-color: white;
+    border-radius: 0.7rem;
+    margin: 0 auto;
+}
+
+.imageCardContainer img{
+    width: 13rem;
+    height: 14rem;
+}
+
+.expContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+.expContainer p{
+    font-weight: bold;
+}
+
+.buyButton{
+    width: 5rem;
+    height: 2rem;
+    background-color: #306BB3;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+}
