@@ -115,6 +115,10 @@ input[type="checkbox"]{
         left: 0;
     }
 
+    .hidden{
+        left: -100%
+    }
+
     .navLinksHeader{
         display: flex;
         flex-direction: column;
@@ -122,7 +126,7 @@ input[type="checkbox"]{
     }
 
     .navLinksHeaderContent ul li{
-        margin: 40px 0;
+        margin: 20px 0;
     }
 }
 
