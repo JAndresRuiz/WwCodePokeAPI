@@ -31,10 +31,13 @@ async function contentChanger(option) {
       style.id = option + "-style-generatedDynamically";
       style.innerHTML = css;
       document.head.appendChild(style);
+      //window.history.pushState({}, "", option);
     });
   } catch (error) {
     console.log("Error:", error);
   }
 }
 
-const darkModeButton = document.querySelector(".darkModeButton");
+function darkMode() {
+  document.body.classList.toggle("darkStyles");
+}

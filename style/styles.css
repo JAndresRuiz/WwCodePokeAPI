@@ -1,225 +1,220 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
 
-body{
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.darkStyles{
+  background-color: black;
+}
+
+.headerContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: #306bb3;
+}
+
+.logoHeaderImage {
+  width: 30%;
+}
+
+.linksButtonHeader {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+@media (max-width: 1600px) {
+  .linksButtonHeader {
+    width: 50%;
+  }
+}
+
+.navLinksHeaderContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLinksHeader {
+  width: 70%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navLinksHeader li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navLinksHeader li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.darkMode {
+  width: 5rem;
+  height: 2rem;
+  color: #306bb3;
+  cursor: pointer;
+}
+
+.hamburgerButton {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: none;
+  color: white;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .linksButtonHeader {
+    justify-content: flex-end;
+  }
+
+  .hamburgerButton {
+    display: block;
+  }
+
+  .navLinksHeaderContent {
+    position: fixed;
+    top: 91px;
+    left: -100%;
+    background-color: black;
+    opacity: 90%;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.6s ease;
+  }
+
+  #click:checked ~ .navLinksHeaderContent {
+    left: 0;
+  }
+
+  .navLinksHeader {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    margin-left: 15%;
+  }
+
+  .navLinksHeaderContent ul li {
+    margin: 20px 0;
+  }
 }
 
-.headerContainer{
-    display: flex;
+footer {
+  background-color: #306bb3;
+  margin-top: auto;
+}
+
+.socialMediaIcons {
+  list-style: none;
+  display: flex;
+}
+
+.socialMediaImg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.socialMediaContainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  height: 25rem;
+  justify-content: space-evenly;
+}
+
+.extraInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.extraInfoContainer ul {
+  list-style: none;
+  margin-top: 3rem;
+}
+
+.extraInfoContainer ul p {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.extraInfoContainer ul li {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.extraInfoContainer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.extraInfoContainer ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 800px) {
+  .extraInfoContainer {
     width: 100%;
-    justify-content: space-between;
-    padding: 1rem 3rem;
-    background-color: #306BB3;
-}
-
-.logoHeaderImage{
-    width: 30%;
-}
-
-.linksButtonHeader{
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 1rem;
-}
-
-@media (max-width: 1600px){
-    .linksButtonHeader{
-        width: 50%;
-    }
-}
-
-.navLinksHeaderContent{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navLinksHeader{
-    width: 70%;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.navLinksHeader li a{
-    color: white;
-    text-decoration: none;
-
-}
-
-.navLinksHeader li a:hover{
-    color: white;
-    text-decoration: underline;
-}
-
-.darkModeButton{
-    width: 5rem;
-    height: 2rem;
-    color: #306BB3;
-    cursor: pointer;
-}
-
-.hamburgerButton{
-    width: 2rem;
-    height: 2rem;
-    cursor: pointer;
-    display: none;
-    color: white;
-}
-
-input[type="checkbox"]{
-    display: none;
-}
-
-@media (max-width: 920px){
-    .linksButtonHeader{
-        justify-content: flex-end;
-    }
-
-    .hamburgerButton{
-        display: block;
-        
-    }
-
-    #click:checked ~ .hamburgerButton::before{
-        content: '\f00d';
-    }
-
-    .navLinksHeaderContent{
-        position: fixed;
-        top: 91px;
-        left: -100%;
-        background-color: black;
-        opacity: 90%;
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-        display: block;
-        transition: all 0.6s ease;
-    }
-
-    #click:checked ~ .navLinksHeaderContent{
-        left: 0;
-    }
-
-    .hidden{
-        left: -100%
-    }
-
-    .navLinksHeader{
-        display: flex;
-        flex-direction: column;
-        margin-left: 15%;
-    }
-
-    .navLinksHeaderContent ul li{
-        margin: 20px 0;
-    }
-}
-
-footer{
-    background-color: #306BB3;
-    margin-top: auto;
-}
-
-.socialMediaIcons{
-    list-style: none;
-    display: flex;
-}
-
-.socialMediaImg{
-    width: 5rem;
-    height: 5rem;
-}
-
-.socialMediaContainer{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    align-items: center;
-    height: 25rem;
+    flex-direction: row;
     justify-content: space-evenly;
-}
-
-.extraInfoContainer{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
+  }
 }
 
-.extraInfoContainer ul{
-    list-style: none;
-    margin-top: 3rem;
+@media (min-width: 1200px) {
+  footer {
+    display: flex;
+  }
+
+  .socialMediaContainer {
+    width: 40%;
+    margin: 0 5rem;
+    align-items: flex-start;
+  }
+
+  .socialMediaContainer p {
+    margin-right: 7rem;
+  }
+
+  .extraInfoContainer {
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
-.extraInfoContainer ul p{
-    text-align: center;
-    margin-bottom: 1rem;
-    color: white;
-    font-weight: bold;
-}
 
-.extraInfoContainer ul li{
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
-
-.extraInfoContainer ul li a{
-    color: white;
-    text-decoration: none;
-}
-
-.extraInfoContainer ul li a:hover{
-    text-decoration: underline;
-}
-
-@media (min-width: 800px){
-    .extraInfoContainer{
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-}
-
-@media (min-width: 1200px){
-    footer{
-        display: flex;
-
-    }
-
-    .socialMediaContainer{
-        width: 40%;
-        margin: 0 5rem;
-        align-items: flex-start;
-    }
-
-    .socialMediaContainer p{
-        margin-right: 7rem;
-    }
-
-    .extraInfoContainer{
-        width: 60%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-}
 
 /*SPA Vanila JS*/
