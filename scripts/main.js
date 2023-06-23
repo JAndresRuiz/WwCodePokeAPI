@@ -39,5 +39,17 @@ async function contentChanger(option) {
 }
 
 function darkMode() {
-  document.body.classList.toggle("darkStyles");
+  const stylesheet = document.getElementById("estilos");
+  const darkMode = document.querySelector(".darkMode");
+  if (stylesheet) {
+    stylesheet.parentNode.removeChild(stylesheet);
+    darkMode.textContent = "Dark Mode";
+  } else {
+    var newStylesheet = document.createElement("link");
+    newStylesheet.rel = "stylesheet";
+    newStylesheet.href = "/style/darkMode.css";
+    newStylesheet.id = "estilos";
+    document.head.appendChild(newStylesheet);
+    darkMode.textContent = "Light Mode";
+  }
 }

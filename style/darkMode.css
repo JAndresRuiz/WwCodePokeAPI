@@ -1,0 +1,44 @@
+main{
+    background-color: black;
+}
+
+.darkButton{
+    background-color: black;
+    color: white;
+}
+
+.descriptionContainer p{
+    color: white;
+}
+
+.descriptionContainer h1{
+    color: white;
+}
+
+.darkLinks{
+    color: white;
+}
+
+.darInfContainer h1{
+    color: white;
+}
+
+.darInfContainer p{
+    color: white;
+}
+
+.darInfContainer ul{
+    color: white;
+}
+
+.darkLine{
+    background-color: white;
+}
+
+.darkTitleContainer h1{
+    color: white;
+}
+
+.darkTitleContainer p{
+    color: white;
+}
